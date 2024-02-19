@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Github Stats</title>
+    <style>
+        #statsContainer {
+            display: none;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .loading img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .profile .user-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .user-info p {
+            margin: 5px 0;
+        }
+
+        #statsContainer p {
+            margin: 5px 0;
+        }
+    </style>
+    <link rel="stylesheet" href="/stats/style/github-style.css">
+</head>
+<body>
+    <h1>Github Stats</h1>
+    
+    <form id="githubForm">
+        <label for="username">Enter Github Username:</label>
+        <input type="text" id="username" name="username">
+        <button type="submit">Get Stats</button>
+    </form>
+
+    <!-- Loading Animation till result is fetched -->
+    <div class="loading">
+        <img src="/assets/loading.gif" alt="Loading...">
+    </div>
+    
+    <div id="statsContainer">
+        <!-- Profile and Stats will be displayed here -->
+        <div class="profile">
+            <img src="" alt="Profile Picture" id="avatar">
+            <div class="user-info">
+                <p><strong>Name:</strong> <span id="name"></span></p>
+                <p><strong>Username:</strong> <span id="username-info"></span></p>
+                <p><strong>Bio:</strong> <span id="bio"></span></p>
+                <p><strong>Location:</strong> <span id="location"></span></p>
+                <p><strong>Join Date:</strong> <span id="join-date"></span></p>
+            </div>
+        </div>
+        <div class="stats">
+            <p><strong>Followers:</strong> <span id="followers"></span></p>
+            <p><strong>Following:</strong> <span id="following"></span></p>
+            <p><strong>Repositories:</strong> <span id="repos"></span></p>
+        </div>
+    </div>
+    
+    <script>
+        // Add your JavaScript code here
+        var x = document.getElementById("githubForm");
+        var loading = document.querySelector(".loading");
+        var statsContainer = document.getElementById("statsContainer");
+
+        x.addEventListener("submit", function(event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value;
+            
+            // Show loading animation
+            loading.style.display = "block";
+            statsContainer.style.display = "none";
+
+            fetch('https://api.github.com/users/' + username)
+            .then(response => response.json())
+            .then(data => {
+                // Hide loading animation
+                loading.style.display = "none";
+                statsContainer.style.display = "block";
+
+                document.getElementById("avatar").src = data.avatar_url;
+                document.getElementById("name").innerText = data.name;
+                document.getElementById("username-info").innerText = data.login;
+                document.getElementById("bio").innerText = data.bio;
+                document.getElementById("location").innerText = data.location;
+                document.getElementById("join-date").innerText = new Date(data.created_at).toLocaleDateString();
+
+                document.getElementById("followers").innerText = data.followers;
+                document.getElementById("following").innerText = data.following;
+                document.getElementById("repos").innerText = data.public_repos;
+            });
+        });
+    </script>
+</body>
+</html>
