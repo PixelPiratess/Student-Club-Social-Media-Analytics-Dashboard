@@ -18,11 +18,12 @@ This project aims to create a comprehensive social media analytics dashboard for
 - Data Analysis: 
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/Digital-Dynamoss/Student-Club-Social-Media-Analytics-Dashboard.git`
-2. 
+1. Clone the repository: `git clone https://github.com/yourusername/student-club-analytics-dashboard.git`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start`
 
 ## Usage
-1. Access the dashboard at `http://localhost:3000` or [Click Here](https://social-analytics.netlify.app/)
+1. Access the dashboard at `http://localhost:3000`
 2. Log in with your social media credentials to view analytics and insights.
 3. Customize reports and strategies based on the provided recommendations.
 

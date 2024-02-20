@@ -3,34 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instagram Account Statistics</title>
+<title>Facebook Account Statistics</title>
 <style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #fafafa;
+        background-color: #fff;
     }
 
     .container {
         max-width: 600px;
         margin: 50px auto;
         padding: 20px;
-        background-color: #fff;
+        background-color: #3b5998;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: #fff;
     }
 
     h1 {
         text-align: center;
         margin-bottom: 20px;
-        color: #333;
     }
 
     label {
         display: block;
         margin-bottom: 5px;
-        color: #666;
     }
 
     input[type="text"] {
@@ -45,7 +44,7 @@
         display: block;
         width: 100%;
         padding: 10px;
-        background-color: #3897f0;
+        background-color: #4267b2;
         color: #fff;
         border: none;
         border-radius: 4px;
@@ -74,8 +73,8 @@
 </head>
 <body>
 <div class="container">
-    <h1>Instagram Account Statistics</h1>
-    <label for="username">Enter Instagram Username:</label>
+    <h1>Facebook Account Statistics</h1>
+    <label for="username">Enter Facebook Username:</label>
     <input type="text" id="username" placeholder="Enter username...">
     <button onclick="fetchData()">Get Statistics</button>
     <div class="stats" id="stats"></div>
@@ -88,13 +87,13 @@
         const username = document.getElementById('username').value;
         const statistics = {
             username: username,
-            posts: 150,
-            followers: 5000,
-            following: 300,
+            posts: 200,
+            followers: 10000,
+            following: 500,
             recentPosts: [
-                { image: 'post1.jpg', likes: 200, comments: 10 },
-                { image: 'post2.jpg', likes: 150, comments: 5 },
-                { image: 'post3.jpg', likes: 180, comments: 8 }
+                { image: 'post1.jpg', likes: 300, comments: 15 },
+                { image: 'post2.jpg', likes: 250, comments: 10 },
+                { image: 'post3.jpg', likes: 280, comments: 12 }
             ]
         };
 
