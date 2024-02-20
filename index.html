@@ -3,190 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbars/">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-    <!-- Style.css -->
-    <link rel="stylesheet" href="/public/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Social Media Analytics</title>
-
-    <!-- CSS -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/public/style.css">
     <style>
-        .bd-placeholder-img {
-          font-size: 1.125rem;
-          text-anchor: middle;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          user-select: none;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
         }
-  
-        @media (min-width: 768px) {
-          .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-          }
+        .navbar {
+            background-color: rgb(10, 46, 83) !important;
         }
-  
-        .b-example-divider {
-          width: 100%;
-          height: 3rem;
-          background-color: rgba(0, 0, 0, .1);
-          border: solid rgba(0, 0, 0, .15);
-          border-width: 1px 0;
-          box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        .title-pane {
+            background-image: linear-gradient(to right, rgb(10, 46, 83), #3ca7ca);
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+            background-size: cover;
         }
-  
-        .b-example-vr {
-          flex-shrink: 0;
-          width: 1.5rem;
-          height: 100vh;
+        .title-pane h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
         }
-  
-        .bi {
-          vertical-align: -.125em;
-          fill: currentColor;
+        .title-pane p {
+            font-size: 1.2rem;
         }
-  
-        .nav-scroller {
-          position: relative;
-          z-index: 2;
-          height: 2.75rem;
-          overflow-y: hidden;
+        .features {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
         }
-  
-        .nav-scroller .nav {
-          display: flex;
-          flex-wrap: nowrap;
-          padding-bottom: 1rem;
-          margin-top: -1px;
-          overflow-x: auto;
-          text-align: center;
-          white-space: nowrap;
-          -webkit-overflow-scrolling: touch;
+        .features h2 {
+            color: #007bff;
         }
-  
-        .btn-bd-primary {
-          --bd-violet-bg: #712cf9;
-          --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-  
-          --bs-btn-font-weight: 600;
-          --bs-btn-color: var(--bs-white);
-          --bs-btn-bg: var(--bd-violet-bg);
-          --bs-btn-border-color: var(--bd-violet-bg);
-          --bs-btn-hover-color: var(--bs-white);
-          --bs-btn-hover-bg: #6528e0;
-          --bs-btn-hover-border-color: #6528e0;
-          --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-          --bs-btn-active-color: var(--bs-btn-hover-color);
-          --bs-btn-active-bg: #5a23c8;
-          --bs-btn-active-border-color: #5a23c8;
+        .features ul {
+            list-style-type: none;
+            padding: 0;
         }
-  
-        .bd-mode-toggle {
-          z-index: 1500;
+        .features li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
         }
-  
-        .bd-mode-toggle .dropdown-menu .active .bi {
-          display: block !important;
+        .footer {
+            background-color: rgb(10, 46, 83);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
         }
-      </style>
+        .footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <!-- Bootstrap CSS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+            <a class="navbar-brand" href="#">Social Media Analytics</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
     
-          <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Social Media Analytics</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Option 1</a></li>
-                        <li><a class="dropdown-item" href="#">Option 2</a></li>
-                        <li><a class="dropdown-item" href="#">Option 3</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Coming Soon!!</a>
-                </li>
-            </ul>
-          </div>
+            <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Option 1</a></li>
+                            <li><a class="dropdown-item" href="#">Option 2</a></li>
+                            <li><a class="dropdown-item" href="#">Option 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Coming Soon!!</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>    
+    </nav>
 
     <!-- Main Content -->
     <div class="title-pane">
-        <div class="row">
-            <div class="col">
-                <h1><strong>Social Media Analytics</strong></h1>
-                <p>Get insights into how your social media campaigns are performing.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Social Media Analytics</h1>
+                    <p>Get insights into how your social media campaigns are performing.</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col text-center">
+            <div class="col-md-3">
                 <h2>Github</h2>
-                <!-- Link to Github Analytics -->
                 <a href="/stats/github-stat.html" class="btn btn-primary">View</a>
             </div>
-            <div class="col text-center">
+            <div class="col-md-3">
                 <h2>Twitter</h2>
-                <!-- Link to Twitter Analytics -->
                 <a href="/stats/twitter-stat.html" class="btn btn-primary">View</a>
             </div>
-            <div class="col text-center">
+            <div class="col-md-3">
                 <h2>Instagram</h2>
-                <!-- Link to Instagram Analytics -->
                 <a href="/stats/instagram-stat.html" class="btn btn-primary">View</a>
             </div>
-            <div class="col text-center">
+            <div class="col-md-3">
                 <h2>Facebook</h2>
-                <!-- Link to Facebook Analytics -->
                 <a href="/stats/facebook-stat.html" class="btn btn-primary">View</a>
             </div>
         </div>
     </div>
 
-    <div class="firstPara">
-        <p>Get insights into how your social media campaigns are performing. This tool will help you understand how your social media campaigns are performing and how you can improve them. You can also compare your social media campaigns with your competitors and see how you are performing against them.</p>
-
-        <p>With this tool, you can track your social media campaigns and see how they are performing. You can also see how your competitors are performing and compare your performance with them. This tool will help you understand how your social media campaigns are performing and how you can improve them.</p>
+    <div class="firstPara mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>Get insights into how your social media campaigns are performing. This tool will help you understand how your social media campaigns are performing and how you can improve them. You can also compare your social media campaigns with your competitors and see how you are performing against them.</p>
+                    <p>With this tool, you can track your social media campaigns and see how they are performing. You can also see how your competitors are performing and compare your performance with them. This tool will help you understand how your social media campaigns are performing and how you can improve them.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="features">
-        <h2><strong>Features</strong></h2>
-        <ul>
-            <ol>
-                <li>Track your social media campaigns</li>
-                <li>Compare your performance with your competitors</li>
-                <li>Understand how your social media campaigns are performing</li>
-                <li>Improve your social media campaigns</li>
-            </ol>
-        </ul>
+    <div class="features mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>Features</h2>
+                    <ul>
+                        <li>Track your social media campaigns</li>
+                        <li>Compare your performance with your competitors</li>
+                        <li>Understand how your social media campaigns are performing</li>
+                        <li>Improve your social media campaigns</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-
 
     <!-- Footer -->
     <div class="footer">
-        <footer>
-            <p>&copy; 2024 - Digital Dynamoss</p>
-        </footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>&copy; 2024 - Digital Dynamoss</p>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

@@ -1,6 +1,7 @@
-/* General styles */
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
 }
@@ -11,52 +12,76 @@ body {
     padding: 0 15px;
 }
 
+/* Navigation */
+.navbar {
+    background-color: #007bff !important;
+}
+
+/* Title Pane */
 .title-pane {
-    background-color: #f8f9fa;
-    padding: 50px 0;
+    background-image: linear-gradient(to right, #007bff, #00bfff);
+    color: #fff;
+    padding: 100px 0;
     text-align: center;
+    background-size: cover;
 }
 
-.firstPara {
-    padding: 50px 0;
+.title-pane h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-.features {
-    padding: 50px 0;
-    background-color: #f8f9fa;
+.title-pane p {
+    font-size: 1.2rem;
 }
 
-.features ul {
-    list-style-type: none;
-    padding: 0;
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
 }
 
-.features li {
-    margin-bottom: 10px;
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
 
+/* Cards */
+.card {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
 .footer {
-    background-color: #343a40;
-    color: white;
+    background-color: #007bff;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 10px;
-    }
+.footer p {
+    margin: 0;
+}
 
-    .title-pane {
-        padding: 30px 0;
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
+    to {
+        opacity: 1;
+    }
+}
 
-    .firstPara {
-        padding: 30px 0;
-    }
-
-    .features {
-        padding: 30px 0;
-    }
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
 }
